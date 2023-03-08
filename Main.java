@@ -1,9 +1,9 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        ArrayList bubblePile = new ArrayList<Integer>();
+        ArrayList bubblePile = new ArrayList();
         int pileLength = (int)(Math.random() * 20);
-        pileLength = 5000;
+        pileLength = 500;
         System.out.println(pileLength);
         for(int i=0; i<pileLength; i++){
             bubblePile.add((int)(Math.random()*100));
@@ -15,10 +15,6 @@ public class Main {
         for(int i=0; i<pileLength2-1; i++) {
             for(int j=0; j<pileLength2-1; j++) {
                 int getJ = (int)(bubblePile.get(j+1));
-                if(j == pileLength2 - 1) {
-                    pileLength2--;
-                    j=0;
-                }
                 if((int)(bubblePile.get(j)) > (int)(bubblePile.get(j+1))) {
                     bubblePile.set(j+1,(int)(bubblePile.get(j)));
                     bubblePile.set(j,getJ);
